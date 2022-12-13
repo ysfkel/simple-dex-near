@@ -1,0 +1,21 @@
+{
+  "name": "fungible-token",
+  "version": "1.0.0",
+  "license": "(MIT AND Apache-2.0)",
+  "scripts": {
+    "deploy:token": "cd contracts/token && ./deploy.sh",
+    "deploy:amm": "cd contracts/amm && ./deploy.sh",
+    "build": "npm run build:token && npm run build:amm",
+    "deploy:token0":"./deploy.sh deploy", 
+    "build:token": "cd contracts/token && ./build.sh",
+    "build:amm": "cd contracts/amm && ./build.sh",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "cd contracts/amm/ && cargo test",
+    "test:integration": "cd contracts && cd tests && cargo run --example integration-tests \"../amm/target/wasm32-unknown-unknown/release/amm.wasm\"",
+    "postinstall": "echo no frontend && echo rs tests && echo rs contract"
+  },
+  "devDependencies": {
+    "near-cli": "^3.3.0"
+  },
+  "dependencies": {}
+}
