@@ -1,9 +1,5 @@
-# Bingo Game
-
-Constant Poroduct AMM
-# Features (Functions)
-
-## Directiories 
+# Simple Constant Poroduct AMM
+## Directories 
 - amm - Contains the code for the Automated Market Maker
 - tests - contains integration tests
 - token - conatains  code for fungible tokens
@@ -19,5 +15,4 @@ Constant Poroduct AMM
  - To run unit tests & integration tests run 
    ```
     npm run test 
-    num run up
 
